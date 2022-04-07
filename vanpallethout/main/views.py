@@ -10,3 +10,9 @@ def contact(request):
 
 def workshops(request):
     return HttpResponse("Hello, you're at the workshops page!")
+
+def info(request):
+    return HttpResponse("Hellow, you're at the infomation page!")
+
+def projects(request):
+    return HttpResponse("Hellow, you're at the projects page!")
