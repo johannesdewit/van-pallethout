@@ -1,0 +1,7 @@
+<ul>
+{% for m in models %}
+<li><a href="{% url 'products:model-detail' m.slug %}">{{ m.name }}</a></li>
+{% empty %}
+<li>Geen modellen beschikbaar.</li>
+{% endfor %}
+</ul>

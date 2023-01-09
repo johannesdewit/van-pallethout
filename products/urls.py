@@ -18,8 +18,8 @@ from . import views
 
 app_name = 'products'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
-    path('<slug:slug>/', views.DetailView.as_view(), name='detail'),
-    path('models/', views.ModelIndexView.as_view(), name='models'),
+    path('', views.ProductIndexView.as_view(), name='index'),
+    path('<slug:slug>/', views.ProductDetailView.as_view(), name='detail'),
+    path('models', views.ModelIndexView.as_view(), name='model-index'),
     path('models/<slug:slug>/', views.ModelDetailView.as_view(), name='model-detail')
 ]
