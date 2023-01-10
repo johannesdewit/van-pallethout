@@ -33,7 +33,9 @@ def create_model(model_name, model_description, model_visibility):
 class ColorTests(TestCase):
     def setUp(self):
         self.valid_color = Color.objects.create(
-            name="valid color", hex_code="#000000", paint_type="lijnolie"
+            name="valid color",
+            hex_code="#000000",
+            paint_type="lijnolie"
         )
 
     def test_hex_code_validation(self):
@@ -55,21 +57,21 @@ class ColorTests(TestCase):
 
         self.assertEqual(Color.objects.all().get(), self.valid_color)
 
-
 class ProductTests(TestCase):
     def setUp(self):
         self.model = Model.objects.create(
-            name="model", visibility_status="p", dimensions="w x l x h"
+            name="model",
+            visibility_status="p",
+            dimensions="w x l x h"
         )
         self.product = Product.objects.create(
-            name="product", visibility_status="p", model=Model.objects.get(name="model")
+            name="product",
+            visibility_status="p",
+            model=Model.objects.get(name="model")
         )
 
     def test_product_dimensions(self):
-        self.assertEqual(
-            Model.objects.get(name="model").dimensions,
-            Product.objects.get(name="product").model.dimensions,
-        )
+        self.assertEqual(Model.objects.get(name="model").dimensions, Product.objects.get(name="product").model.dimensions)
 
 
 # VIEW TESTS

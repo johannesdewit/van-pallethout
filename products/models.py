@@ -1,10 +1,18 @@
+import os
 from django_extensions.db.fields import AutoSlugField
+
+from django.conf import settings
 from django.db import models
 
 from .validators import validate_hex_code
 
 
 VISIBILITY_STATUS_OPTIONS = {("a", "archived"), ("d", "draft"), ("p", "published")}
+AVAILABILITY_STATUS_OPTIONS = {
+    ("a", "available"),
+    ("so", "sold out"),
+    ("r", "on request"),
+}
 
 
 class CommonInfo(models.Model):
@@ -16,7 +24,7 @@ class CommonInfo(models.Model):
     slug = AutoSlugField(populate_from="name", unique=True)
     description = models.TextField(blank=True, null=True)
     visibility_status = models.CharField(
-        choices=VISIBILITY_STATUS_OPTIONS, max_length=1, blank=False, default="draft"
+        choices=VISIBILITY_STATUS_OPTIONS, max_length=1, blank=False, default="d"
     )
 
     def __str__(self):
@@ -33,6 +41,27 @@ class Product(CommonInfo):
 
     model = models.ForeignKey("Model", on_delete=models.CASCADE, blank=True, null=True)
     colors = models.ManyToManyField("Color")
+    material = models.ManyToManyField("Material")
+
+    # Shop info
+    available = models.CharField(
+        max_length=2, choices=AVAILABILITY_STATUS_OPTIONS, blank=False, default="a"
+    )
+    available_from = models.DateField(null=True, blank=True)
+    stock = models.PositiveSmallIntegerField(default=0)
+    price = models.DecimalField(max_digits=6, decimal_places=2, default="0")
+
+    # TODO: Images
+    thumbnail = models.ImageField(
+        upload_to=settings.THUMBNAIL_PATH, null=True, blank=True
+    )
+    image_folder = models.FilePathField(
+        path=settings.IMAGES_PATH,
+        allow_files=False,
+        allow_folders=True,
+        blank=True,
+        null=True,
+    )
 
 
 class Model(CommonInfo):
@@ -42,6 +71,12 @@ class Model(CommonInfo):
 
     type = models.ForeignKey("Type", on_delete=models.CASCADE, blank=True, null=True)
     dimensions = models.CharField(
+        max_length=40,
+        help_text="Please use the following format: <em>Width x Length x Height</em>.",
+        blank=True,
+        null=True,
+    )
+    dimensions_seat = models.CharField(
         max_length=40,
         help_text="Please use the following format: <em>Width x Length x Height</em>.",
         blank=True,
@@ -75,6 +110,17 @@ class Color(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()
         return super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
+
+class Material(models.Model):
+    """
+    Material model which contains possible materials for products.
+    """
+
+    name = models.CharField(max_length=120, unique=True, blank=False)
 
     def __str__(self):
         return self.name
