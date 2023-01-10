@@ -1,4 +1,3 @@
-import os
 from django_extensions.db.fields import AutoSlugField
 
 from django.conf import settings
@@ -53,7 +52,7 @@ class Product(CommonInfo):
 
     # TODO: Images
     thumbnail = models.ImageField(
-        upload_to=settings.THUMBNAIL_PATH, null=True, blank=True
+        upload_to='images/thumbnails', null=True, blank=True
     )
     image_folder = models.FilePathField(
         path=settings.IMAGES_PATH,
