@@ -20,9 +20,9 @@ class CommonInfo(models.Model):
     Contains information required by Products and Models.
     """
 
-    name = models.CharField(max_length=120, unique=True, blank=False)
+    name = models.CharField("Name", max_length=120, unique=True, blank=False)
     slug = AutoSlugField(populate_from="name", unique=True)
-    description = models.TextField(blank=True, null=True)
+    description = models.TextField("Descriptions", blank=True, null=True)
     visibility_status = models.CharField(
         choices=VISIBILITY_STATUS_OPTIONS, max_length=1, blank=False, default="d"
     )
@@ -63,6 +63,13 @@ class Product(CommonInfo):
         null=True,
     )
 
+    def properties(self):
+        return [
+            self.model,
+            self.colors,
+            self.material,
+        ]
+
 
 class Model(CommonInfo):
     """
@@ -101,9 +108,13 @@ class Color(models.Model):
     Color model which contains possible colors for products.
     """
 
-    name = models.CharField(max_length=120, unique=True, blank=False)
+    name = models.CharField("Model name", max_length=120, unique=True, blank=False)
     hex_code = models.CharField(
-        max_length=7, unique=True, blank=False, validators=[validate_hex_code]
+        "Color hex code",
+        max_length=7,
+        unique=True,
+        blank=False,
+        validators=[validate_hex_code],
     )
     paint_type = models.CharField(max_length=60, blank=True, null=True)
 
@@ -120,7 +131,7 @@ class Material(models.Model):
     Material model which contains possible materials for products.
     """
 
-    name = models.CharField(max_length=120, unique=True, blank=False)
+    name = models.CharField("Material name", max_length=120, unique=True, blank=False)
 
     def __str__(self):
         return self.name

@@ -1,0 +1,28 @@
+{% extends '_site_base.html' %}
+
+{% block head_title %}{{ item.name }}{% endblock head_title %}
+
+{% block body %}
+<ol>
+    <li><a href="{% url 'products:index' %}">Producten</a></li>
+    {% if item.model %}
+    <li><a href="{% url 'products:model-detail' item.model %}">{{ item.model }}</a></li>
+    {% endif %}
+</ol>
+
+<h1>{{ item.name }}</h1>
+<p>{{ item.description}}</p>
+<h2>Prijs</h2>
+<p>€ {{ item.price }}</p>
+<h2>Eigenschappen</h2>
+{% if item.properties %}
+<table>
+    {% for p in item.properties %}
+    <tr>
+        <td>{{ p.verbose_name }}</td>
+        <td>{{ p }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% endblock body %}

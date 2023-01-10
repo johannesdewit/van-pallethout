@@ -34,7 +34,8 @@ class DetailView(generic.DetailView):
 
 class ProductDetailView(DetailView):
     model = Product
-
+    template_name = "products/product-detail.html"
 
 class ModelDetailView(DetailView):
     model = Model
+    template_name = "products/model-detail.html"
