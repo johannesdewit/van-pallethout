@@ -40,8 +40,8 @@ class Product(CommonInfo):
     """
 
     model = models.ForeignKey("Model", on_delete=models.CASCADE, blank=True, null=True)
-    colors = models.ManyToManyField("Color")
-    material = models.ManyToManyField("Material")
+    colors = models.ManyToManyField("Color", blank=True)
+    material = models.ManyToManyField("Material", blank=True)
 
     # Shop info
     available = models.CharField(
