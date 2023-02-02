@@ -24,6 +24,7 @@ urlpatterns = (
     [
         path("", views.IndexView.as_view(), name="index"),
         path("admin/", admin.site.urls),
+        path("album/", include("album.urls")),
         path("products/", include("products.urls")),
         path(
             "pages/",

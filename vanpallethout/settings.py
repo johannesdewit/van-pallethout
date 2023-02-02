@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "vanpallethout",
     "products",
     "workshops",
+    'album',
 ]
 
 MIDDLEWARE = [
