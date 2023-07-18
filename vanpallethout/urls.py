@@ -14,16 +14,26 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.contrib.flatpages import views
+from django.contrib.flatpages import views as vws
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
+from . import views
 
 urlpatterns = (
     [
+        path("", views.IndexView.as_view(), name="index"),
         path("admin/", admin.site.urls),
         path("products/", include("products.urls")),
-        path("pages/", include("django.contrib.flatpages.urls")),
+        path(
+            "pages/",
+            include(
+                [
+                    path("contact/", vws.flatpage, {"url": "/over/contact/"}, name="contact")
+                ]
+            ),
+        ),
+        path("workshops/", include("workshops.urls")),
     ]
     + static(settings.STATIC_URL, document_root=settings.STATIC_DIR)
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
