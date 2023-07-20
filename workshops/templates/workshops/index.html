@@ -1,5 +1,7 @@
 {% extends '_site_base.html' %}
 
+{% block head_title %}Workshops{% endblock %}
+
 {% block content %}
 <div class="p-5 mb-4 bg-body-tertiary">
     <div class="container-fluid py-5">
@@ -17,7 +19,7 @@
         <img src="{{ w.thumbnail }}" class="card-img-top " alt="{{ w.name }} thumbnail">
         <div class="card">
         <div class="card-body">
-            <a class="h5 card-title">{{ w.name }}</a>
+            <h5 class="card-title">{{ w.name }}</h5>
             <p class="card-text">
                 {% if w.preview_text %}
                 {{ w.preview_text }}

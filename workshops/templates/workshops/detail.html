@@ -1,18 +1,22 @@
 {% extends '_site_base.html' %}
 {% block head_title %}{{ item.name }}{% endblock head_title %}
 
-{% block body %}
-<ul>
-    <li><a href="{% url 'workshops:index' %}">Workshops</a></li>
-</ul>
+{% block content %}
+<nav class="mt-3 mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'workshops:index' %}">Workshops</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ item.name }}</li>
+    </ol>
+</nav>
 
+<img src="/media/{{ item.thumbnail }}">
 <h1>{{ item.name }}</h1>
 <p>{{ item.description}}</p>
-<img src="/media/{{ item.thumbnail }}">
 <h2>Prijs</h2>
 <p>€ {{ item.price }}</p>
 <h3>Groepsgroote</h3>
-<p>Van {{ item.minimum_paraticipants }} tot {{ item.maximum_participants }} personen</p>
+<p>Van {{ item.minimum_participants }} tot {{ item.maximum_participants }} personen</p>
 {% if item.related_models %}
 {% if item.related_models.length > 1 %}
 <h3>Gerelateerde modellen</h3>
@@ -25,4 +29,4 @@
     {% endfor %}
 </ul>
 {% endif %}
-{% endblock body %}
+{% endblock %}

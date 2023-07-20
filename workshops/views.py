@@ -15,13 +15,10 @@ class WorkshopIndexView(IndexView):
     context_object_name = "workshops"
 
 # DetailViews
-class DetailView(generic.DetailView):
-    template_name = "workshop/detail.html"
+class WorkshopDetailView(generic.DetailView):
+    template_name = "workshops/detail.html"
     context_object_name = "item"
+    model = Workshop
 
     def get_queryset(self):
         return self.model.objects.filter(visibility_status="p")
-    
-class WorkshopDetailView(DetailView):
-    model = Workshop
-    template_name = "workshop/workshop-detail.html"
