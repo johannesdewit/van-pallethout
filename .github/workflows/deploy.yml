@@ -20,4 +20,4 @@ jobs:
           source: ./
           destination: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl
           skipUnchanged: true
-          skipDirectories: .github
+          skipDirectories: .github|.git
