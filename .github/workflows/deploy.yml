@@ -17,5 +17,6 @@ jobs:
           host: ${{ secrets.FTP_HOSTNAME }}
           username: ${{ secrets.FTP_USERNAME }}
           password:  ${{ secrets.FTP_PASSWORD }}
-          local_dir: ./
-          remote_dir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl 
+          localDir: ./
+          remoteDir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl
+          ftpAction: Copy
