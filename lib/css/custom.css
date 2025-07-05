@@ -1,0 +1,184 @@
+html { 
+	height: 100%; 
+}
+
+body {
+	background-color: #FFF;
+	height: 100%;
+}
+
+p {
+	color: #1E3333;
+}
+
+a, a:visited {
+	color: #1E3333;
+}
+
+a:hover, a:focus, a:active {
+	color: #364B4B;
+}
+
+#GoogleMap { 
+	height: 400px;
+	margin-bottom: 15px;
+}
+
+#vanpallethout {
+	padding-bottom: 15px;
+}
+
+#dsmheader {
+	background-image: url(../../img/projecten/projDSM/Header.jpg);
+	width: 100%;
+	height: 600px;
+	background-position: center center;
+	
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #7FA5A4;
+    border-color: #7FA5A4;
+}
+
+/* logo */
+.logo img{
+	width: max;
+	height: auto;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #4C6161;
+    border-color: #1E3333;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #7FA5A4;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #7FA5A4;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #1E3333;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #1E3333;
+	background-color: #657777;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #1E3333;
+    background-color: #869393;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #1E3333;
+    background-color: #869393;
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #1E3333;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #869393;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #657777;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+
+.navbar-text {
+	padding-right: 10px;
+	vertical-align: middle;
+}
+.navbar-text > a {
+	color: #1E3333; 
+	text-decoration: none;
+}
+
+.fa-google-plus-square:hover {
+	color: #dd4b39;
+}
+.fa-facebook-square:hover {
+	color: #3b5998; 
+}
+.fa-instagram:hover {
+	color: #3f729b;
+}
+
+
+
+.text-primary {
+	color:#7FA5A4;
+}
+
+.link {
+	color:#7FA5A4;
+}
+
+.tab {
+	margin-left: 5em;
+}
+
+.article {
+	margin-bottom: 20px;
+}
+
+.contact table {
+	padding: 15px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.adres {
+	float: left;
+}
+
+
+
+#maps {
+	height: 100%;
+	
+}
+
+#footer {
+	vertical-align: middle;
+	height: 50px;
+	position: relative;
+	width: 100%;
+	bottom: 0px;
+}
