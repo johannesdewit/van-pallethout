@@ -18,6 +18,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password:  ${{ secrets.FTP_PASSWORD }}
           verify_cert: false
-          local_dir: ./
-          remote_dir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl 
+          local_dir: "./"
+          remote_dir: "/customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl"
           create_remote_dir: false
+          script: ""
