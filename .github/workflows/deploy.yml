@@ -13,11 +13,11 @@ jobs:
         
       - name: Deploy
         uses: pontago/lftp-deploy-action@v1.0.1
-          with:
-            host: ${{ secrets.FTP_HOSTNAME }}
-            username: ${{ secrets.FTP_USERNAME }}
-            password:  ${{ secrets.FTP_PASSWORD }}
-            verify_cert: false
-            local_dir: ./
-            remote_dir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl 
-            create_remote_dir: false
+        with:
+          host: ${{ secrets.FTP_HOSTNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password:  ${{ secrets.FTP_PASSWORD }}
+          verify_cert: false
+          local_dir: ./
+          remote_dir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl 
+          create_remote_dir: false
