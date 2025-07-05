@@ -4,19 +4,20 @@ on:
       - 'old-html-site/Main'
 
 jobs:
-  deploy-via-ftp:
+  deploy:
+    name: Checkout and Deploy
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          - uses: pontago/lftp-deploy-action@v1.0.1
-            with:
-              # Sever Hostname or IP
-              host: ${{ secrets.FTP_HOSTNAME }}
-              # Login Username
-              username: ${{ secrets.FTP_USERNAME }}
-              # Login Password
-              password:  ${{ secrets.FTP_PASSWORD }}
-              verify_cert: false
-              local_dir: "/"
-              remote_dir: "/customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl" 
-              create_remote_dir: false
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Deploy
+        uses: pontago/lftp-deploy-action@v1.0.1
+          with:
+            host: ${{ secrets.FTP_HOSTNAME }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password:  ${{ secrets.FTP_PASSWORD }}
+            verify_cert: false
+            local_dir: ./
+            remote_dir: /customers/4/a/0/cfspmx0u3/webroots/sites/webspace/httpdocs/vanpallethout.nl 
+            create_remote_dir: false
