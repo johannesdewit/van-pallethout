@@ -40,6 +40,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -128,7 +139,7 @@
                 });
               });
             </script>
-            <ul class="bxslider">
+            <ul class="bxslider slider-items">
               <li>
                 <img
                   src="img/slideshows/ss1/img1.jpg"

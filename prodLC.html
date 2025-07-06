@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -228,37 +239,23 @@
             });
           });
         </script>
-        <ul class="bxslider">
-          <li>
-            <img
-              src="img/producten/prodLC/img01.JPG"
-              class="img-responsive"
-              alt="Lazy Chair"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLC/img02.JPG"
-              class="img-responsive"
-              alt="Lazy Chair"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLC/img03.JPG"
-              class="img-responsive"
-              alt="Lazy Chair"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLC/img04.JPG"
-              class="img-responsive"
-              alt="Lazy Chair"
-            />
-          </li>
+        <ul class="bxslider slider-items">
         </ul>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/slideshows/ss7/img01.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img02.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img03.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img04.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img05.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img06.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img07.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img08.JPG', title: 'Lazy Chair, onbehandeld' },
+          { img: 'img/slideshows/ss7/img09.JPG', title: 'Lazy Chair, onbehandeld' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

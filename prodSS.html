@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -228,37 +239,20 @@
             });
           });
         </script>
-        <ul class="bxslider">
-          <li>
-            <img
-              src="img/producten/prodSS/img01.JPG"
-              class="img-responsive"
-              alt="Sit Straight"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodSS/img02.JPG"
-              class="img-responsive"
-              alt="Sit Straight"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodSS/img03.JPG"
-              class="img-responsive"
-              alt="Sit Straight"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodSS/img04.JPG"
-              class="img-responsive"
-              alt="Sit Straight"
-            />
-          </li>
+        <ul class="bxslider slider-items">
         </ul>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/slideshows/ss6/img01.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img02.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img03.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img04.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img05.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img06.JPG', title: 'Sit Straight, onbehandeld' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

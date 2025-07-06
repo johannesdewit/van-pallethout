@@ -56,6 +56,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
 
     <!-- Latest compiled and minified JavaScript -->
@@ -197,7 +208,7 @@
             });
           </script>
 
-          <ul class="bxslider">
+          <ul class="bxslider slider-items">
             <li>
               <img
                 src="img/slideshows/ss6/img01.JPG"
@@ -242,6 +253,17 @@
           </ul>
         </div>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/slideshows/ss6/img01.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img02.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img03.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img04.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img05.JPG', title: 'Sit Straight, onbehandeld' },
+          { img: 'img/slideshows/ss6/img06.JPG', title: 'Sit Straight, onbehandeld' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

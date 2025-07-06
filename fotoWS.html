@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -128,101 +139,31 @@
               });
             });
           </script>
-          <ul class="bxslider">
-            <li><img src="img/slideshows/ss3/img01.JPG" alt="Werkplaats" /></li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img02.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img03.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img04.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img05.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img06.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img07.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img08.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img09.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img10.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img11.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img12.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img13.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img14.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img15.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss3/img16.JPG"
-                alt="Werkplaats, aan het werk"
-              />
-            </li>
+          <ul class="bxslider slider-items">
           </ul>
         </div>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/slideshows/ss3/img01.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img02.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img03.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img04.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img05.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img06.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img07.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img08.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img09.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img10.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img11.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img12.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img13.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img14.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img15.JPG', title: 'Workshop' },
+          { img: 'img/slideshows/ss3/img16.JPG', title: 'Workshop' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

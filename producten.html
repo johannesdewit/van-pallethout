@@ -39,6 +39,33 @@
           $(this).load(file);
         });
       });
+
+      const ProductItem = ({ url, img, title }) => `
+        <div 
+          class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left"
+        >
+          <a 
+            href="${url}" 
+            class="thumbnail"
+          >
+            <img
+              src="${img}"
+              class="img-fluid"
+              alt="${title}"
+
+            />
+            <div class="caption visible-lg">
+              <h3>${title}</h3>
+            </div>
+            <div class="caption hidden-xs hidden-lg">
+              <h4>${title}</h4>
+            </div>
+            <div class="caption visible-xs">
+              <h5>${title}</h5>
+            </div>
+          </a>
+        </div>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -117,119 +144,18 @@
         </ol>
       </div>
 
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodLC.html" class="thumbnail active">
-          <img
-            src="img/producten/prodLC/tn.jpg"
-            class="img-responsive"
-            alt="Lazy Chair"
-          />
-          <div class="caption visible-lg">
-            <h3>Lazy Chair</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Lazy Chair</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Lazy Chair</h5>
-          </div>
-        </a>
-      </div>
+      <div class="products-list"></div>
 
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodLCXL.html" class="thumbnail active">
-          <img
-            src="img/producten/prodLCXL/tn.jpg"
-            class="img-responsive"
-            alt="Lazy Chair XL"
-          />
-          <div class="caption visible-lg">
-            <h3>Lazy Chair XL</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Lazy Chair XL</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Lazy Chair XL</h5>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodSS.html" class="thumbnail active">
-          <img
-            src="img/producten/prodSS/tn.jpg"
-            class="img-responsive"
-            alt="Sit Straight"
-          />
-          <div class="caption visible-lg">
-            <h3>Sit Straight</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Sit Straight</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Sit straight</h5>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodSEATS.html" class="thumbnail active">
-          <img
-            src="img/producten/prodSEATS/tn.jpg"
-            class="img-responsive"
-            alt="Seats"
-          />
-          <div class="caption visible-lg">
-            <h3>Seats</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Seats</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Seats</h5>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodBE.html" class="thumbnail active">
-          <img
-            src="img/producten/prodBE/tn.jpg"
-            class="img-responsive"
-            alt="Bench"
-          />
-          <div class="caption visible-lg">
-            <h3>Bench</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Bench</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Bench</h5>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodCH.html" class="thumbnail active">
-          <img
-            src="img/producten/prodCH/tn.jpg"
-            class="img-responsive"
-            alt="Church"
-          />
-          <div class="caption visible-lg">
-            <h3>Church</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Church</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Church</h5>
-          </div>
-        </a>
-      </div>
+      <script>
+        $('.products-list').html([
+          { url: 'prodLC.html', img: 'img/producten/prodLC/tn.JPG', title: 'Lazy Chair' },
+          { url: 'prodLCXL.html', img: 'img/producten/prodLCXL/tn.jpg', title: 'Lazy Chair XL' },
+          { url: 'prodSS.html', img: 'img/producten/prodSS/tn.JPG', title: 'Sit Straight' },
+          { url: 'prodSEATS.html', img: 'img/producten/prodSEATS/tn.jpg', title: 'Seats' },
+          { url: 'prodBE.html', img: 'img/producten/prodBE/tn.jpg', title: 'Bench' },
+          { url: 'prodCH.html', img: 'img/producten/prodCH/tn.jpg', title: 'Church' },
+        ].map(ProductItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>
