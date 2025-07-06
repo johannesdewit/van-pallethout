@@ -1,350 +1,162 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <title>Home - Van Pallethout</title>
-    <meta
-      name="keywords"
-      content="pallethout, van pallethout, middelstum, workshops, groningen, joop de wit, fraam, pallet, meubels, palletmeubels, cliquo, label, workshop, bedrijf, kopen, maken, design, hergebruik, recycle, minibieb, pedestal, tuinstoel, tuinmeubels, tuinmeubelen, tuintafel, pallethout, pallets, hout"
-    />
-    <meta
-      name="description"
-      content="Op zoek naar een leuke groepsactiviteit? VAN PALLETHOUT biedt workshops aan in het maken van palletmeubels. De meubels worden gemaakt van gebruikt pallethout. Het oude hout wordt hergebruikt voor een nieuwe duurzame designstoel. Hergebruik optima forma."
-    />
-    <meta name="author" content="Johannes de Wit" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-      crossorigin="anonymous"
-    />
-    <!-- bxSlider CSS file -->
-    <link href="lib/css/jquery.bxslider.css" rel="stylesheet" />
-    <!-- Font Awesome stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
-    />
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="lib/css/custom.css" />
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<head>
+		<title>Home - Van Pallethout</title>
+		<meta name="keywords" content="pallethout, van pallethout, middelstum, workshops, groningen, joop de wit, fraam, pallet, meubels, palletmeubels, cliquo, label, workshop, bedrijf, kopen, maken, design, hergebruik, recycle, minibieb, pedestal, tuinstoel, tuinmeubels, tuinmeubelen, tuintafel, pallethout, pallets, hout">
+		<meta name="description" content="Op zoek naar een leuke groepsactiviteit? VAN PALLETHOUT biedt workshops aan in het maken van palletmeubels. De meubels worden gemaakt van gebruikt pallethout. Het oude hout wordt hergebruikt voor een nieuwe duurzame designstoel. Hergebruik optima forma.">
+		<meta name="author" content="Johannes de Wit">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- bxSlider CSS file -->
+		<link href="lib/css/jquery.bxslider.css" rel="stylesheet" />
+		<!-- Font Awesome stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<!-- Custom stylesheet -->
+		<link rel="stylesheet" href="lib/css/custom.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <script>
-      $(function () {
-        var includes = $("[data-include]");
-        $.each(includes, function () {
-          var file = "views/" + $(this).data("include") + ".html";
-          $(this).load(file);
-        });
-      });
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bxSlider Javascript file -->
-    <script src="lib/js/jquery.bxslider.min.js"></script>
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="57x57"
-      href="img/favicon/apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="img/favicon/apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="img/favicon/apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="img/favicon/apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="60x60"
-      href="img/favicon/apple-touch-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="120x120"
-      href="img/favicon/apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="76x76"
-      href="img/favicon/apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="152x152"
-      href="img/favicon/apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon/favicon-196x196.png"
-      sizes="196x196"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon/favicon-128.png"
-      sizes="128x128"
-    />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta
-      name="msapplication-TileImage"
-      content="img/favicon/mstile-144x144.png"
-    />
-    <meta
-      name="msapplication-square70x70logo"
-      content="img/favicon/mstile-70x70.png"
-    />
-    <meta
-      name="msapplication-square150x150logo"
-      content="img/favicon/mstile-150x150.png"
-    />
-    <meta
-      name="msapplication-wide310x150logo"
-      content="img/favicon/mstile-310x150.png"
-    />
-    <meta
-      name="msapplication-square310x310logo"
-      content="img/favicon/mstile-310x310.png"
-    />
-  </head>
+		<script>
+			$(function () {
+				var includes = $('[data-include]')
+				$.each(includes, function () {
+					var file = 'views/' + $(this).data('include') + '.html'
+					$(this).load(file)
+				})
+				})
+		</script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- bxSlider Javascript file -->
+		<script src="lib/js/jquery.bxslider.min.js"></script>
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="&nbsp;"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="img/favicon/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="img/favicon/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="img/favicon/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="img/favicon/mstile-310x310.png" />
+	</head>
 
-  <body>
-    <div id="fb-root"></div>
-    <script>
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    <div class="container">
-      <div data-include="_header"></div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid" id="nav-fluid">
-              <div class="navbar-header">
-                <button
-                  type="button"
-                  class="navbar-toggle"
-                  data-toggle="collapse"
-                  data-target="#navigationbar"
-                >
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="navigationbar">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="vanpallethout.html">Van Pallethout</a></li>
-                  <li><a href="workshops.html">Workshops</a></li>
-                  <li><a href="producten.html">Producten</a></li>
-                  <li><a href="fotoalbum.html">Fotoalbum</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <h1>
-            Test. Er wordt aan de website gewerkt... we zijn later weer helemaal
-            terug!
-          </h1>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <script>
-              $(document).ready(function () {
-                $(".bxslider").bxSlider({
-                  adaptiveHeight: true,
-                  mode: "fade",
-                  auto: true,
-                  captions: true,
-                });
-              });
-            </script>
-            <ul class="bxslider">
-              <li>
-                <img
-                  src="img/slideshows/ss1/img1.jpg"
-                  title='"Church"'
-                  alt="Church"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/slideshows/ss1/img2.jpg"
-                  title='"Sit Straight"'
-                  alt="Sit Straight"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/slideshows/ss1/img3.jpg"
-                  title='"Lazy Chair XL"'
-                  alt="Lazy Chair XL"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/slideshows/ss1/img4.jpg"
-                  title='"Lazy Chairs"'
-                  alt="Lazy Chairs"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/slideshows/ss1/img5.jpg"
-                  title='"Lazy Chairs"'
-                  alt="Lazy Chairs"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/slideshows/ss1/img6.jpg"
-                  title='"Church"'
-                  alt="Church"
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 pull-right">
-            <div class="row">
-              <div class="page-header">
-                <h2>Uitgelicht</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="thumbnail">
-                  <img src="img/thumbnails/tn02.jpg" alt="Workshop" />
-                  <div class="caption">
-                    <h3>Workshop Palletmeubels maken</h3>
-                    <p>
-                      Op zoek naar een leuke workshop? Van Pallethout verzorgt
-                      workshops in het maken van palletmeubels, designmeubels
-                      gemaakt van gerecycled hout. De workshops zijn voor
-                      iedereen toegankelijk, leerzaam en leuk. De stoel krijg je
-                      natuurlijk mee naar huis!
-                    </p>
-                    <p>
-                      <a
-                        href="workshops.html"
-                        class="btn btn-primary"
-                        role="button"
-                        >Lees Meer</a
-                      >
-                      <a
-                        href="fotoWS.html"
-                        class="btn btn-default"
-                        role="button"
-                        >Bekijk foto's</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="thumbnail">
-                  <img src="img/thumbnails/tn03c-lc.jpg" alt="Lazy Chair" />
-                  <div class="caption">
-                    <h3>Lazy Chair</h3>
-                    <p>
-                      De Lazy Chair is een luie stoel die gemaakt kan worden in
-                      onze workshop, of bestelt kan worden!
-                    </p>
-                    <p>
-                      <a
-                        href="producten.html"
-                        class="btn btn-primary"
-                        role="button"
-                        >Lees Meer</a
-                      >
-                      <a
-                        href="fotoLC.html"
-                        class="btn btn-default"
-                        role="button"
-                        >Bekijk foto's</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pull-left">
-            <div
-              class="fb-page"
-              data-href="https://www.facebook.com/VanPallethout/"
-              data-tabs="timeline"
-              data-width="500"
-              data-height="700"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="true"
-            >
-              <blockquote
-                cite="https://www.facebook.com/VanPallethout/"
-                class="fb-xfbml-parse-ignore"
-              >
-                <a href="https://www.facebook.com/VanPallethout/"
-                  >Van Pallethout</a
-                >
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
+	<body>
+			<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="container">
+				<div data-include="_header"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="container-fluid" id="nav-fluid">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									</button>
+								</div>
+								<div class="collapse navbar-collapse" id="navigationbar">
+									<ul class="nav navbar-nav">
+										<li class="active"><a href="index.html">Home</a></li>
+										<li><a href="vanpallethout.html">Van Pallethout</a></li> 
+										<li><a href="workshops.html">Workshops</a></li>
+										<li><a href="producten.html">Producten</a></li>
+										<li><a href="fotoalbum.html">Fotoalbum</a></li>
+										<li><a href="contact.html">Contact</a></li> 
+										
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<h1> Test. Er wordt aan de website gewerkt... we zijn later weer helemaal terug!
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<script>
+								$(document).ready(function(){
+									$('.bxslider').bxSlider({
+									adaptiveHeight: true,
+									mode: 'fade',						
+									auto: true,
+									captions: true
+									});
+								});
+							</script>
+							<ul class="bxslider">
+								<li><img src="img/slideshows/ss1/img1.jpg" title="&quot;Church&quot;" alt="Church" /></li>
+								<li><img src="img/slideshows/ss1/img2.jpg" title="&quot;Sit Straight&quot;" alt="Sit Straight"/></li>
+								<li><img src="img/slideshows/ss1/img3.jpg" title="&quot;Lazy Chair XL&quot;" alt="Lazy Chair XL"/></li>
+								<li><img src="img/slideshows/ss1/img4.jpg" title="&quot;Lazy Chairs&quot;" alt="Lazy Chairs"/></li>
+								<li><img src="img/slideshows/ss1/img5.jpg" title="&quot;Lazy Chairs&quot;" alt="Lazy Chairs"/></li>
+								<li><img src="img/slideshows/ss1/img6.jpg" title="&quot;Church&quot;" alt="Church"/></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 pull-right">
+							<div class="row">
+								<div class="page-header">
+									<h2>Uitgelicht</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+									<div class="thumbnail">
+										<img src="img/thumbnails/tn02.jpg" alt="Workshop">
+									  <div class="caption">
+										<h3>Workshop Palletmeubels maken</h3>
+										<p>Op zoek naar een leuke workshop? Van Pallethout verzorgt workshops in het maken van palletmeubels, designmeubels gemaakt van gerecycled hout. De workshops zijn voor iedereen toegankelijk, leerzaam en leuk. De stoel krijg je natuurlijk mee naar huis!</p>
+										<p><a href="workshops.html" class="btn btn-primary" role="button">Lees Meer</a> <a href="fotoWS.html" class="btn btn-default" role="button">Bekijk foto's</a></p>
+									  </div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+									<div class="thumbnail">
+										<img src="img/thumbnails/tn03c-lc.jpg" alt="Lazy Chair">
+									  <div class="caption">
+										<h3>Lazy Chair</h3>
+										<p>De Lazy Chair is een luie stoel die gemaakt kan worden in onze workshop, of bestelt kan worden!</p>
+										<p><a href="producten.html" class="btn btn-primary" role="button">Lees Meer</a> <a href="fotoLC.html" class="btn btn-default" role="button">Bekijk foto's</a></p>
+									  </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pull-left">
+							<div class="fb-page" data-href="https://www.facebook.com/VanPallethout/" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/VanPallethout/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/VanPallethout/">Van Pallethout</a></blockquote></div>
+						</div>
+					</div>
+				</div>
+				
+				<div data-include="_footer"></div>
+		
+			</div>
+			
+	</body>
 
-      <div data-include="_footer"></div>
-    </div>
-  </body>
 </html>
