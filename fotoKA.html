@@ -40,6 +40,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -129,24 +140,17 @@
               });
             });
           </script>
-          <ul class="bxslider">
-            <li>
-              <img
-                src="img/slideshows/ss2/img1.jpg"
-                title="1920"
-                alt="Responsive image"
-              />
-            </li>
-            <li>
-              <img
-                src="img/slideshows/ss2/img3.jpg"
-                title="2015"
-                alt="Responsive image"
-              />
-            </li>
+          <ul class="bxslider slider-items">
           </ul>
         </div>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/slideshows/ss2/img1.jpg', title: '1920' },
+          { img: 'img/slideshows/ss2/img3.jpg', title: '2015' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

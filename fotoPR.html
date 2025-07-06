@@ -40,6 +40,33 @@
           $(this).load(file);
         });
       });
+
+      const AlbumItem = ({ url, img, title }) => `
+        <div 
+          class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left"
+        >
+          <a 
+            href="${url}" 
+            class="thumbnail"
+          >
+            <img
+              src="${img}"
+              class="img-fluid"
+              alt="${title}"
+
+            />
+            <div class="caption visible-lg">
+              <h3>${title}</h3>
+            </div>
+            <div class="caption hidden-xs hidden-lg">
+              <h4>${title}</h4>
+            </div>
+            <div class="caption visible-xs">
+              <h5>${title}</h5>
+            </div>
+          </a>
+        </div>
+      `;
     </script>
 
     <!-- Latest compiled and minified JavaScript -->
@@ -132,21 +159,15 @@
         </ol>
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <a href="fotoPAL.html" class="thumbnail">
-          <img src="img/thumbnails/tn03c.jpg" alt="Palletmeubels" />
+      <div class="albums-list"></div>
 
-          <div class="caption visible-lg">
-            <h3>Palletmeubels</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Palletmeubels</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Palletmeubels</h5>
-          </div>
-        </a>
-      </div>
+      <script>
+        $('.albums-list').html([
+          { url: 'prodLC.html', img: 'img/producten/prodLC/tn.JPG', title: 'Lazy Chair' },
+          { url: 'prodSS.html', img: 'img/producten/prodSS/tn.JPG', title: 'Sit Straight' },
+          { url: 'prodBE.html', img: 'img/producten/prodBE/tn.jpg', title: 'Bench' },
+        ].map(AlbumItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

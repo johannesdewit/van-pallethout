@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -228,37 +239,18 @@
             });
           });
         </script>
-        <ul class="bxslider">
-          <li>
-            <img
-              src="img/producten/prodLCXL/img01.JPG"
-              class="img-responsive"
-              alt="Lazy Chair XL"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLCXL/img02.JPG"
-              class="img-responsive"
-              alt="Lazy Chair XL"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLCXL/img03.JPG"
-              class="img-responsive"
-              alt="Lazy Chair XL"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodLCXL/img04.JPG"
-              class="img-responsive"
-              alt="Lazy Chair XL"
-            />
-          </li>
+        <ul class="bxslider slider-items">
         </ul>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/producten/prodLCXL/img01.JPG', title: 'Lazy Chair XL' },
+          { img: 'img/producten/prodLCXL/img02.JPG', title: 'Lazy Chair XL' },
+          { img: 'img/producten/prodLCXL/img03.JPG', title: 'Lazy Chair XL' },
+          { img: 'img/producten/prodLCXL/img04.JPG', title: 'Lazy Chair XL' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -228,30 +239,17 @@
             });
           });
         </script>
-        <ul class="bxslider">
-          <li>
-            <img
-              src="img/producten/prodSEATS/img01.JPG"
-              class="img-responsive"
-              alt="Seats"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodSEATS/img02.JPG"
-              class="img-responsive"
-              alt="Seats"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodSEATS/img03.JPG"
-              class="img-responsive"
-              alt="Seats"
-            />
-          </li>
+        <ul class="bxslider slider-items">
         </ul>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/producten/prodSEATS/img01.JPG', title: 'Seats, onbehandeld' },
+          { img: 'img/producten/prodSEATS/img02.JPG', title: 'Seats, onbehandeld' },
+          { img: 'img/producten/prodSEATS/img03.JPG', title: 'Seats, onbehandeld' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>

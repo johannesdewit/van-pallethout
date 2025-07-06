@@ -39,6 +39,17 @@
           $(this).load(file);
         });
       });
+
+      const SliderItem = ({ img, title }) => `
+        <li>
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="Image of ${title}"
+              title="${title}"
+            />
+          </li>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -228,30 +239,17 @@
             });
           });
         </script>
-        <ul class="bxslider">
-          <li>
-            <img
-              src="img/producten/prodCH/img1.jpg"
-              class="img-responsive"
-              alt="Church"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodCH/img2.JPG"
-              class="img-responsive"
-              alt="Church"
-            />
-          </li>
-          <li>
-            <img
-              src="img/producten/prodCH/img3.JPG"
-              class="img-responsive"
-              alt="Church"
-            />
-          </li>
+        <ul class="bxslider slider-items">
         </ul>
       </div>
+
+      <script>
+        $('.slider-items').html([
+          { img: 'img/producten/prodCH/img1.JPG', title: 'Church' },
+          { img: 'img/producten/prodCH/img2.JPG', title: 'Church' },
+          { img: 'img/producten/prodCH/img3.JPG', title: 'Church' },
+        ].map(SliderItem).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>
