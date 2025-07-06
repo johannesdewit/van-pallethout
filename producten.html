@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="lib/css/custom.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Load elements from /views/ -->
     <script>
       $(function () {
         var includes = $("[data-include]");
@@ -39,6 +40,29 @@
           $(this).load(file);
         });
       });
+    </script>
+    <!--  -->
+    <script>
+      const Item = ({ url, img, title }) => `
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+          <a href="${url}" class="thumbnail">
+            <img
+              src="${img}"
+              class="img-responsive"
+              alt="${title}"
+            />
+            <div class="caption visible-lg">
+              <h3>${title}</h3>
+            </div>
+            <div class="caption hidden-xs hidden-lg">
+              <h4>${title}</h4>
+            </div>
+            <div class="caption visible-xs">
+              <h5>${title}</h5>
+            </div>
+          </a>
+        </div>
+      `;
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script
@@ -191,24 +215,12 @@
         </ol>
       </div>
 
-      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-        <a href="prodMB.html" class="thumbnail">
-          <img
-            src="img/producten/prodMB/tn.jpg"
-            class="img-responsive"
-            alt="Minibieb"
-          />
-          <div class="caption visible-lg">
-            <h3>Minibieb</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Minibieb</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Minibieb</h5>
-          </div>
-        </a>
-      </div>
+      <script>
+        $('.list-items').html([
+          { url: 'prodMB.html', img: 'img/producten/prodMB/tn.jpg', title: 'Minibieb' },
+          { url: 'prodLC.html', img: 'img/producten/prodLC/tn.jpg', title: 'Lazy Chair' },
+        ].map(Item).join(''));
+      </script>
 
       <div data-include="_footer"></div>
     </div>
