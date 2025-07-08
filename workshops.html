@@ -127,114 +127,23 @@
         class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12"
         data-ride="carousel"
       >
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Heel leuk, leerzaam, mooi tempo en fijn om meteen iets mee
-                    naar huist te nemen! 9/10 "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Het was ontzettend gezellig, Joop heeft veel "trucs" die
-                    je klus vergemakkelijken. Het is comfortabel kletsen met
-                    Joop, hij is erg geinteresseerd en warm! "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Alles was goed voor elkaar. Het was leuk en goed te doen,
-                    na afloop wel moe ;) "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Heel leuk, gezellig, leuke stoel, mooie werkplaats, goed
-                    licht, lekkere taart. "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Positieve sfeer, werkbare materialen -ook voor minder
-                    technische mensen-, prettige ruimte, laagdrempelig. "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">" Veel geleerd, leuk! "</p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Ik heb een leuke tijd gehad, geleerd en gelachen met een
-                    mooie stoel als resultaat! "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Erg leuk, fijne plek om te werken! "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>
-                <em>
-                  <p class="text-center text-muted">
-                    " Ik heb een hele leuke middag gehad. "
-                  </p>
-                </em>
-              </h3>
-            </div>
-          </div>
+        <div class="carousel-inner quote-list" role="listbox">
         </div>
       </div>
+
+      <script>
+        $('.quote-list').html([
+          { text: 'Heel leuk, leerzaam, mooi tempo en fijn om meteen iets mee naar huis te nemen! 9/10', status: 'active' },
+          { text: 'Het was ontzettend gezellig, Joop heeft veel "trucs" die je klus vergemakkelijken. Het is comfortabel kletsen met Joop, hij is erg geinteresseerd en warm!' },
+          { text: 'Alles was goed voor elkaar. Het was leuk en goed te doen, na afloop wel moe ;)' },
+          { text: 'Heel leuk, gezellig, leuke stoel, mooie werkplaats, goed licht, lekkere taart.' },
+          { text: 'Positieve sfeer, werkbare materialen -ook voor minder technische mensen-, prettige ruimte, laagdrempelig.' },
+          { text: 'Veel geleerd, leuk!' },
+          { text: 'Ik heb een leuke tijd gehad, geleerd en gelachen met een mooie stoel als resultaat!' },
+          { text: 'Erg leuk, fijne plek om te werken!' },
+          { text: 'Ik heb een hele leuke middag gehad.' },
+        ].map(QuoteItem).join(''));
+      </script>
 
       <div class="row article">
         <div class="container">
