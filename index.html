@@ -31,27 +31,8 @@
     <link rel="stylesheet" href="lib/css/custom.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-    <script>
-      $(function () {
-        var includes = $("[data-include]");
-        $.each(includes, function () {
-          var file = "views/" + $(this).data("include") + ".html";
-          $(this).load(file);
-        });
-      });
-
-      const SliderItem = ({ img, title }) => `
-        <li>
-            <img
-              src="${img}"
-              class="img-responsive"
-              alt="Image of ${title}"
-              title="${title}"
-            />
-          </li>
-      `;
-    </script>
+    <!--- Custom javascript -->
+    <script src="lib/js/script.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
