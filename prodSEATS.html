@@ -135,24 +135,14 @@
         </ol>
       </div>
 
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodSEATS.html" class="thumbnail active">
-          <img
-            src="img/producten/prodSEATS/tn.jpg"
-            class="img-responsive"
-            alt="Seats"
-          />
-          <div class="caption visible-lg">
-            <h3>Seats</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Seats</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Seats</h5>
-          </div>
-        </a>
-      </div>
+      <div class="product-thumbnail"></div>
+
+      <script>
+        $('.product-thumbnail').html([
+          { url: 'prodSEATS.html', img: 'img/producten/prodSEATS/tn.jpg', title: 'Seats' },
+        ].map(ProductItem));
+      </script>
+
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
         <div class="page-header">
           <h1>Seats</h1>
@@ -182,9 +172,10 @@
             <div role="tabpanel" class="tab-pane active" id="Seats">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="text-right">
-                    <b class="text-primary"> Prijs: op aanvraag. </b>
+                  <h3>
+                    <b class="text-primary"> Prijs: &euro; 375,&ndash;</b>
                   </h3>
+                  <p class="small text-right">Prijs per 1 augustus 2025 voor een onbehandeld meubel.</p>
                 </div>
                 <div class="panel-body">
                   <p class="lead">De Seats is de grote tafel van VAN PALLETHOUT.</p>
