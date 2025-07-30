@@ -1,0 +1,48 @@
+{% extends '_site_base.html' %}
+
+{% block head_title %}Workshops{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-body-tertiary">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Workshops in het maken van duurzame design meubels</h1>
+      <p class="col-md-8 fs-4">Leren werken met hout? Een uitdagende activiteit met een mooi zichtbaar resultaat?</p>
+      <div class="gap-2 d-md-flex justify-content-md-end">
+        <a href="#" role="button" class="btn btn-lg btn-outline-dark">Bekijk mijn workshops</a><a href="#" class="btn btn-primary btn-lg" type="button">Neem contact op</a>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+{% for w in workshops %}
+    <div class="col-sm-4 mb-3">
+        <img src="{{ w.thumbnail }}" class="card-img-top " alt="{{ w.name }} thumbnail">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ w.name }}</h5>
+            <p class="card-text">
+                {% if w.preview_text %}
+                {{ w.preview_text }}
+                {% else %}
+                {{ w.description|truncatewords:30 }}
+                {% endif %}
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ w.minimum_participants }}-{{ w.maximum_participants }} personen</li>
+            <li class="list-group-item">€ {{ w.price}} per persoon</li>
+          </ul>
+        <div class="card-body">
+            <a href="{% url 'workshops:detail' w.slug %}" class="btn btn-primary">Meer informatie</a>
+        </div>
+        </div>
+    </div>
+{% empty %}
+<div class="container justify-content-md-center">
+    <div class="col-4 alert alert-info" role="alert">
+        Geen workshops beschikbaar.
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
