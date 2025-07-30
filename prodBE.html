@@ -135,24 +135,14 @@
         </ol>
       </div>
 
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-        <a href="prodBE.html" class="thumbnail active">
-          <img
-            src="img/producten/prodBE/tn.jpg"
-            class="img-responsive"
-            alt="Bench"
-          />
-          <div class="caption visible-lg">
-            <h3>Bench</h3>
-          </div>
-          <div class="caption hidden-xs hidden-lg">
-            <h4>Bench</h4>
-          </div>
-          <div class="caption visible-xs">
-            <h5>Bench</h5>
-          </div>
-        </a>
-      </div>
+      <div class="product-thumbnail"></div>
+
+      <script>
+        $('.product-thumbnail').html([
+         { url: 'prodBE.html', img: 'img/producten/prodBE/tn.jpg', title: 'Bench' },
+        ].map(ProductItem));
+      </script>
+
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
         <div class="page-header">
           <h1>Bench</h1>
