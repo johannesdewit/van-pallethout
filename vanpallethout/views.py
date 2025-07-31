@@ -4,7 +4,7 @@ from workshops.models import Workshop
 # Create your views here.
 # IndexViews
 class IndexView(generic.ListView):
-    template_name = "_site_base.html"
+    template_name = "index.html"
     model = Workshop
     context_object_name = "workshops"
 
