@@ -6,12 +6,16 @@ from django.db import models
 from .validators import validate_hex_code
 
 
-VISIBILITY_STATUS_OPTIONS = {("a", "archived"), ("d", "draft"), ("p", "published")}
-AVAILABILITY_STATUS_OPTIONS = {
+VISIBILITY_STATUS_OPTIONS = (
+    ("a", "archived"), 
+    ("d", "draft"), 
+    ("p", "published")
+)
+AVAILABILITY_STATUS_OPTIONS = (
     ("a", "available"),
     ("so", "sold out"),
     ("r", "on request"),
-}
+)
 
 
 class CommonInfo(models.Model):
@@ -51,9 +55,7 @@ class Product(CommonInfo):
     price = models.DecimalField(max_digits=6, decimal_places=2, default="0")
 
     # TODO: Images
-    thumbnail = models.ImageField(
-        upload_to='images/thumbnails', null=True, blank=True
-    )
+    thumbnail = models.ImageField(upload_to="images/thumbnails", null=True, blank=True)
     image_folder = models.FilePathField(
         path=settings.IMAGES_PATH,
         allow_files=False,

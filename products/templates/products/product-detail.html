@@ -5,7 +5,7 @@
 <ol>
     <li><a href="{% url 'products:index' %}">Producten</a></li>
     {% if item.model %}
-    <li><a href="{% url 'products:model-detail' item.model %}">{{ item.model }}</a></li>
+    <li><a href="{% url 'products:model-detail' item.model.slug %}">{{ item.model }}</a></li>
     {% endif %}
 </ol>
 

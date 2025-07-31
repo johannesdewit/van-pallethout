@@ -2,7 +2,11 @@ from django_extensions.db.fields import AutoSlugField
 
 from django.db import models
 
-VISIBILITY_STATUS_OPTIONS = {("a", "archived"), ("d", "draft"), ("p", "published")}
+VISIBILITY_STATUS_OPTIONS = (
+    ("a", "archived"), 
+    ("d", "draft"), 
+    ("p", "published")
+)
 
 # Create your models here.
 class Workshop(models.Model):

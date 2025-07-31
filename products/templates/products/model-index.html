@@ -1,5 +1,6 @@
 {% extends '_site_base.html' %}
 
+{% block body %}
 <ul>
 {% for m in models %}
 <li><a href="{% url 'products:model-detail' m.slug %}">{{ m.name }}</a></li>
@@ -7,3 +8,4 @@
 <li>Geen modellen beschikbaar.</li>
 {% endfor %}
 </ul>
+{% endblock %}
