@@ -1,8 +1,8 @@
 on:
-  - push:
-      branches:
-        - 'old-html-site/main'
-  - workflow_dispatch
+  push:
+    branches:
+      - 'old-html-site/main'
+  workflow_dispatch
 
 jobs:
   deploy:
