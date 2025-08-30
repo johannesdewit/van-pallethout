@@ -1,7 +1,8 @@
 on:
-  push:
+  - push:
     branches:
       - 'old-html-site/Main'
+  - workflow_dispatch
 
 jobs:
   deploy:
